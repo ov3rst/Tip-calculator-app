@@ -1,0 +1,244 @@
+:root {
+  /** Colors **/
+  --Strong-cyan: hsl(172, 67%, 45%);
+  --Very-dark-cyan: hsl(183, 100%, 15%);
+  --Dark-grayish-cyan: hsl(186, 14%, 43%);
+  --Grayish-cyan: hsl(184, 14%, 56%);
+  --Light-grayish-cyan: hsl(185, 41%, 84%);
+  --Very-light-grayish-cyan: hsl(189, 41%, 97%);
+  --White: hsl(0, 0%, 100%);
+}
+
+/** Reset **/
+html {
+  box-sizing: border-box;
+  font-size: 16px;
+  font-family: "Space Mono", monospace;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+  transition: all 0.2s ease;
+}
+
+body {
+  background-color: var(--Light-grayish-cyan);
+}
+
+header {
+  margin: 4rem auto 0;
+  text-align: center;
+}
+
+h1 {
+  display: none;
+}
+
+input {
+  font-family: inherit;
+  font-size: 1.3rem;
+  color: var(--Very-dark-cyan);
+  outline: none;
+  text-align: end;
+  border: none;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+}
+
+input:invalid {
+  border: thin solid red;
+}
+
+input::placeholder {
+  color: var(--Grayish-cyan);
+}
+
+legend:first-of-type ~ legend {
+  margin-top: 2rem;
+}
+
+/** Page styles **/
+.main-container {
+  background-color: var(--White);
+  border-radius: 1.3rem;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  color: var(--Dark-grayish-cyan);
+  margin: 2.5rem auto 0;
+  padding-bottom: 2rem;
+  width: 375px;
+}
+
+.form {
+  padding: 2rem;
+}
+
+.bill,
+.people {
+  align-items: center;
+  border-radius: 0.35rem;
+  border: 2px solid transparent;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 0.5rem;
+  padding: 0.3rem 0.8rem;
+}
+
+.tip {
+  display: flex;
+  flex-wrap: wrap;
+  /* justify-content: space-between; */
+  gap: 0.9rem;
+  margin-top: 0.8rem;
+}
+
+.tip input {
+  background-color: var(--Very-dark-cyan);
+  border: none;
+  border-radius: 0.3rem;
+  padding: 0.35rem;
+  color: var(--Light-grayish-cyan);
+  text-align: center;
+  width: 148px;
+}
+
+.tip input:not([disabled]) {
+  background-color: unset;
+  color: var(--Very-dark-cyan);
+  text-align: end;
+  padding-right: 1rem;
+  border: 2px solid transparent;
+}
+
+.tip input:not([disabled])::placeholder {
+  color: var(--Dark-grayish-cyan);
+}
+
+.tip input[type="text"].active {
+  background-color: var(--Strong-cyan);
+  color: var(--Very-dark-cyan);
+}
+
+.screen {
+  background-color: var(--Very-dark-cyan);
+  border-radius: 0.8rem;
+  margin: 0 1.5rem;
+  padding: 2rem 1.5rem 1.5rem;
+}
+
+.screen > div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.person-amount {
+  margin-top: 1.5rem;
+}
+
+.screen > div > span {
+  font-size: 2.2rem;
+  color: var(--Strong-cyan);
+}
+
+.screen h2 {
+  font-size: 1rem;
+  color: var(--Light-grayish-cyan);
+}
+
+.screen h2 > span {
+  color: var(--Grayish-cyan);
+}
+
+.screen-btn {
+  border: none;
+  border-radius: 0.3rem;
+  background-color: hsla(172, 67%, 45%, 0.1);
+  color: var(--Very-dark-cyan);
+  font-family: inherit;
+  font-size: 1.2rem;
+  margin-top: 1.5rem;
+  padding: 0.7rem;
+  text-transform: uppercase;
+  width: 100%;
+}
+
+.attribution {
+  margin-top: 1rem;
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media (hover: hover) {
+  .bill:hover,
+  .people:hover,
+  .tip input:not([disabled]):hover {
+    border-color: var(--Strong-cyan);
+  }
+
+  .tip input[type="text"]:hover {
+    background-color: var(--Light-grayish-cyan);
+    color: var(--Very-dark-cyan);
+    cursor: pointer;
+  }
+
+  .screen-btn.active:hover {
+    background-color: var(--Light-grayish-cyan);
+    cursor: pointer;
+  }
+}
+
+@media (min-width: 1024px) {
+  header {
+    margin-top: 8rem;
+  }
+
+  .main-container {
+    width: 920px;
+    display: flex;
+    padding: 2rem 2rem 2rem 3rem;
+    gap: 2rem;
+  }
+
+  .form {
+    padding: 0;
+    flex: 0 1 400px;
+  }
+
+  .tip input {
+    height: 46px;
+    width: 120px;
+  }
+
+  .tip input:not([disabled]) {
+    font-size: 1.6rem;
+    padding-right: 0.8rem;
+  }
+
+  .screen {
+    flex-grow: 1;
+    margin: 0;
+  }
+
+  .person-amount {
+    margin-top: 1rem;
+  }
+
+  .screen > div > span {
+    font-size: 3rem;
+  }
+
+  .screen-btn {
+    margin-top: 5.85rem;
+  }
+}

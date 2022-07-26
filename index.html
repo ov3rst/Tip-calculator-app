@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="styles.css">
+
+  <title>Frontend Mentor | Tip calculator app</title>
+</head>
+
+<body>
+  <header><img src="./images/logo.svg" alt="Logo"></header>
+  <main class="main-container">
+    <h1 class="hide">Hide</h1>
+    <form id="tip-form" class="form">
+      <legend>Bill</legend>
+      <div class="bill">
+        <img src="./images/icon-dollar.svg" alt="Dollar">
+        <input type="number" name="total" placeholder="0.00" pattern="^[\d]+">
+      </div>
+      <legend>Select Tip %</legend>
+      <div class="tip">
+        <input type="text" disabled value="5%" data-value="0.05">
+        <input type="text" disabled value="10%" data-value="0.1">
+        <input type="text" disabled value="15%" data-value="0.15">
+        <input type="text" disabled value="25%" data-value="0.25">
+        <input type="text" disabled value="50%" data-value="0.5">
+        <input type="number" name="custom" placeholder="Custom" min="1" max="100" pattern="^[\d]+">
+      </div>
+      <legend>Number of People</legend>
+      <div class="people">
+        <img src="./images/icon-person.svg" alt="Person">
+        <input type="number" name="peson" placeholder="0" pattern="^[\d]+">
+      </div>
+    </form>
+    <div class="screen">
+      <div class="tip-amount ">
+        <h2>Tip Amount<br><span>/ person</span></h2>
+        <span id="tip-amount">$0.00</span>
+      </div>
+      <div class="person-amount">
+        <h2>Total<br><span>/ person</span></h2>
+        <span id="person-amount">$0.00</span>
+      </div>
+      <button disabled class="screen-btn">Reset</button>
+    </div>
+  </main>
+  <footer class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a href="#">Oliver Tejeda</a>.
+  </footer>
+  <script src="script.js"></script>
+</body>
+
+</html>
