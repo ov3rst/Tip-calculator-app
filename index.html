@@ -19,9 +19,10 @@
       <legend>Bill</legend>
       <div class="bill">
         <img src="./images/icon-dollar.svg" alt="Dollar">
-        <input type="number" name="total" placeholder="0.00" pattern="^[\d]+">
+        <input type="number" name="total" placeholder="0.00">
+        <span class="error">Can't be zero</span>
       </div>
-      <legend>Select Tip %</legend>
+      <legend class="tip-legend">Select Tip %</legend>
       <div class="tip">
         <input type="text" disabled value="5%" data-value="0.05">
         <input type="text" disabled value="10%" data-value="0.1">
@@ -33,7 +34,8 @@
       <legend>Number of People</legend>
       <div class="people">
         <img src="./images/icon-person.svg" alt="Person">
-        <input type="number" name="peson" placeholder="0" pattern="^[\d]+">
+        <input type="number" name="person" placeholder="0" pattern="^[\d]+">
+        <span class="error">Can't be zero</span>
       </div>
     </form>
     <div class="screen">

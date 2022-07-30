@@ -22,6 +22,7 @@ html {
   margin: 0;
   padding: 0;
   box-sizing: inherit;
+  text-decoration: none;
   transition: all 0.2s ease;
 }
 
@@ -52,10 +53,6 @@ input[type="number"]::-webkit-outer-spin-button {
   -webkit-appearance: none;
 }
 
-input:invalid {
-  border: thin solid red;
-}
-
 input::placeholder {
   color: var(--Grayish-cyan);
 }
@@ -79,8 +76,21 @@ legend:first-of-type ~ legend {
   padding: 2rem;
 }
 
+.error {
+  color: #f44336;
+  position: absolute;
+  right: 1rem;
+  top: -2rem;
+  opacity: 0;
+}
+
+.error.active {
+  opacity: 1;
+}
+
 .bill,
 .people {
+  position: relative;
   align-items: center;
   border-radius: 0.35rem;
   border: 2px solid transparent;
@@ -90,10 +100,14 @@ legend:first-of-type ~ legend {
   padding: 0.3rem 0.8rem;
 }
 
+.bill.active,
+.people.active {
+  border-color: #f44336 !important;
+}
+
 .tip {
   display: flex;
   flex-wrap: wrap;
-  /* justify-content: space-between; */
   gap: 0.9rem;
   margin-top: 0.8rem;
 }
@@ -169,6 +183,10 @@ legend:first-of-type ~ legend {
   width: 100%;
 }
 
+.screen-btn.active {
+  background-color: var(--Strong-cyan);
+}
+
 .attribution {
   margin-top: 1rem;
   font-size: 11px;
@@ -176,7 +194,7 @@ legend:first-of-type ~ legend {
 }
 
 .attribution a {
-  color: hsl(228, 45%, 44%);
+  color: var(--Very-dark-cyan);
 }
 
 @media (hover: hover) {
@@ -239,6 +257,6 @@ legend:first-of-type ~ legend {
   }
 
   .screen-btn {
-    margin-top: 5.85rem;
+    margin-top: 6.4rem;
   }
 }
