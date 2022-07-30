@@ -16,25 +16,25 @@
   <main class="main-container">
     <h1 class="hide">Hide</h1>
     <form id="tip-form" class="form">
-      <legend>Bill</legend>
+      <h2>Bill</h2>
       <div class="bill">
         <img src="./images/icon-dollar.svg" alt="Dollar">
         <input type="number" name="total" placeholder="0.00">
         <span class="error">Can't be zero</span>
       </div>
-      <legend class="tip-legend">Select Tip %</legend>
+      <h2 class="tip-legend">Select Tip %</h2>
       <div class="tip">
         <input type="text" disabled value="5%" data-value="0.05">
         <input type="text" disabled value="10%" data-value="0.1">
         <input type="text" disabled value="15%" data-value="0.15">
         <input type="text" disabled value="25%" data-value="0.25">
         <input type="text" disabled value="50%" data-value="0.5">
-        <input type="number" name="custom" placeholder="Custom" min="1" max="100" pattern="^[\d]+">
+        <input type="number" name="custom" placeholder="Custom" min="1" max="100">
       </div>
-      <legend>Number of People</legend>
+      <h2>Number of People</h2>
       <div class="people">
         <img src="./images/icon-person.svg" alt="Person">
-        <input type="number" name="person" placeholder="0" pattern="^[\d]+">
+        <input type="number" name="person" placeholder="0">
         <span class="error">Can't be zero</span>
       </div>
     </form>

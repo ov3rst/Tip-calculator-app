@@ -39,6 +39,10 @@ h1 {
   display: none;
 }
 
+h2 {
+  font-size: 1rem;
+}
+
 input {
   font-family: inherit;
   font-size: 1.3rem;
@@ -57,7 +61,7 @@ input::placeholder {
   color: var(--Grayish-cyan);
 }
 
-legend:first-of-type ~ legend {
+h2:first-of-type ~ h2 {
   margin-top: 2rem;
 }
 
